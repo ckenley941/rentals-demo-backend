@@ -12,12 +12,13 @@ Supported Query Filters:
 - sort (string)
 */
 
+//Making them all strings to start for ease of coding when converting the parameter values
 type RentalFilter struct {
-	PriceMin int                 `json:"price_min"`
-	PriceMax int                 `json:"price_max"`
-	Limit    int                 `json:"limit"`
-	Offset   int                 `json:"offset"`
-	Ids      []int               `json:"ids"`
-	Near     []map[string]string `json:"near"`
-	Sort     string              `json:"sort"`
+	PriceMin string   `json:"price_min"`
+	PriceMax string   `json:"price_max"`
+	Limit    int      `json:"limit"`
+	Offset   int      `json:"offset"`
+	Ids      []string `json:"ids"`
+	Near     string   `json:"near"`
+	Sort     string   `json:"sort"`
 }
